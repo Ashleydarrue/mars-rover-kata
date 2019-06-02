@@ -81,9 +81,9 @@ function moveForward(rover){
 
 var commands = ['f', 'r', 'l'];
 
-function roverCommands(commands)
-  for(i=0; i<=command.length; i++){
-    switch(command[i]){
+function roverCommands(commands){
+  for(i=0; i<=commands.length; i++){
+    switch(commands[i]){
       case "f":
         goFoward(rover);
         break;
@@ -96,7 +96,8 @@ function roverCommands(commands)
       default:
         console.log("Please enter a valid command. Valid commands include : 'l' 'r' or 'f' Thank you")
     }
-    console.log(rover, travelLog)
+    console.log(rover, rover.travelLog)
   }
+}
 
 

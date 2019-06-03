@@ -86,17 +86,20 @@ function roverCommands(commands){
     switch(commands[i]){
       case "f":
         moveForward(rover);
+        rover.travelLog.push([rover.x, rover.y]);
         break;
       case "r":
         turnRight(rover);
+        rover.travelLog.push([rover.x, rover.y]);
         break;
       case "l":
         turnLeft(rover);
+        rover.travelLog.push([rover.x, rover.y]);
         break;
       default:
         console.log("Please enter a valid command. Valid commands include : 'l' 'r' or 'f' Thank you");
     }
-    console.log(rover, rover.travelLog.push);
+    console.log(rover, rover.travelLog);
   }
 }
 
